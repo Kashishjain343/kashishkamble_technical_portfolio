@@ -308,7 +308,7 @@ footer{padding-top:28px}
 @media (max-width:980px){.hl{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media (max-width:480px){.hl{grid-template-columns:1fr}.hl li{min-height:0}}
 @media (max-width:420px){.now ul{grid-template-columns:1fr}}
-.how{margin-top:72px}
+.how{margin-top:72px}.how.how-sec{margin-top:8px}
 .how h3,.facts2 h3{font:800 26px var(--disp);margin:0 0 16px;letter-spacing:-.015em}
 .howgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
 .howgrid article{background:var(--soft);border-radius:18px;padding:22px}
@@ -576,7 +576,7 @@ section.page{padding-top:64px;padding-bottom:16px}
 @media (max-width:560px){.pg b{font-size:16px}.dots{display:none}.pgw{grid-template-columns:1fr 1fr}}
 @media (prefers-reduced-motion:reduce){.book .page.on{animation:none}}
 
-@media (max-width:780px){.nav{flex-wrap:wrap;height:auto;padding:10px 24px 0;row-gap:6px}.nav ul{display:flex!important;order:3;width:100%;overflow-x:auto;gap:22px;padding:4px 0 10px;scrollbar-width:none}.nav ul::-webkit-scrollbar{display:none}.nav ul a{white-space:nowrap;font-size:15px}html{scroll-padding-top:110px}}
+@media (max-width:780px){.nav{flex-wrap:wrap;height:auto;padding:10px 24px 0;row-gap:6px}.nav ul{display:flex!important;order:3;width:100%;overflow-x:auto;gap:22px;padding:4px 0 10px;scrollbar-width:none}.nav ul::-webkit-scrollbar{display:none}.nav ul a{white-space:nowrap;font-size:15px}.nav ul li{flex:0 0 auto}html{scroll-padding-top:110px}}
 .pgw{align-items:stretch}.pg{justify-content:center}
 /* Tool usage chart */
 .usage{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:40px;align-items:start;background:var(--soft);border-radius:22px;padding:36px}
@@ -632,7 +632,7 @@ dialog.lb::backdrop{background:rgba(23,22,47,.8)}
 <a class="skip" href="#main">Skip to content</a>
 <header><nav class="wrap nav" aria-label="Main">
   <a class="brand" href="#home"><i aria-hidden="true">KK</i>Kashish Kamble</a>
-  <ul><li><a href="#projects" data-p="projects">Projects</a></li><li><a href="#skills" data-p="skills">Skills</a></li><li><a href="#experience" data-p="experience">Experience</a></li><li><a href="#about" data-p="about">About</a></li><li><a href="#contact" data-p="contact">Contact</a></li></ul>
+  <ul><li><a href="#approach" data-p="approach">How I work</a></li><li><a href="#projects" data-p="projects">Projects</a></li><li><a href="#skills" data-p="skills">Skills</a></li><li><a href="#experience" data-p="experience">Experience</a></li><li><a href="#about" data-p="about">About</a></li><li><a href="#contact" data-p="contact">Contact</a></li></ul>
   <a class="btn" href="Kashish_Kamble_Resume.pdf" target="_blank" rel="noopener">Résumé</a>
 </nav></header>
 
@@ -683,6 +683,16 @@ dialog.lb::backdrop{background:rgba(23,22,47,.8)}
 </div></div>
 
 </section>
+<section class="page" id="approach" data-title="How I work" aria-labelledby="a-h"><div class="wrap">
+  <div class="sh"><h2 id="a-h">How I work</h2><p>Before any code or charts, every project starts the same way. These three steps are behind everything you'll see next.</p></div>
+  <div class="how how-sec">
+    <ol class="flow">
+      <li class="f1 rv"><span class="fic" aria-hidden="true"><svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="17" fill="none" stroke="currentColor" stroke-width="4"/><path d="M19 19a5 5 0 1 1 7 5c-2 1-2 2-2 4" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round"/><circle cx="24" cy="34" r="2.6" fill="currentColor"/></svg></span><em>Step 1</em><h4>Start with the real question</h4><p>Before opening a dataset, I ask what decision it should help someone make. My project titles are questions for that reason.</p></li>
+      <li class="f2 rv"><span class="fic" aria-hidden="true"><svg viewBox="0 0 48 48"><circle cx="21" cy="21" r="12" fill="none" stroke="currentColor" stroke-width="4"/><path d="M30 30l10 10" stroke="currentColor" stroke-width="5" stroke-linecap="round"/><path d="M15 23l4 4 8-9" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><em>Step 2</em><h4>Be honest about what the data can't say</h4><p>In my H-1B study the answer was "no clear effect," and I said so, along with the limits of two snapshots of data.</p></li>
+      <li class="f3 rv"><span class="fic" aria-hidden="true"><svg viewBox="0 0 48 48"><rect x="7" y="9" width="34" height="26" rx="4" fill="none" stroke="currentColor" stroke-width="4"/><path d="M14 29v-6M21 29v-11M28 29v-8M35 29v-13" stroke="currentColor" stroke-width="4" stroke-linecap="round"/><path d="M18 41h12" stroke="currentColor" stroke-width="4" stroke-linecap="round"/></svg></span><em>Step 3</em><h4>Make it easy to act on</h4><p>A model is only useful if a manager can read it. That's why my optimization ended up in a Power BI dashboard, not a spreadsheet of equations.</p></li>
+    </ol>
+  </div>
+</div></section>
 <section class="page" id="projects" data-title="Projects" aria-labelledby="p-h"><div class="wrap">
   <div class="sh"><h2 id="p-h">Project explorer</h2><p>Pick a project to see the question, what I did and the result. Use the arrow keys to move between them.</p></div>
   <div class="seg" role="group" aria-label="Filter projects">
@@ -780,14 +790,6 @@ dialog.lb::backdrop{background:rgba(23,22,47,.8)}
       <p>I studied data science and analysis at Jain University in Bengaluru, then went back to the floor: running operations for my family's business in Aurangabad and building tracking tools at Endurance Technologies. Now I'm in the Boston area, finishing my master's at Brandeis.</p>
       <p>Outside class, I'm usually working as an SBE Captain for the business school or on Phonathon calls with alumni. Both keep me practicing the other half of the job: listening first, then explaining clearly.</p>
     </div>
-  </div>
-  <div class="how">
-    <h3>How I work</h3>
-    <ol class="flow">
-      <li class="f1 rv"><span class="fic" aria-hidden="true"><svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="17" fill="none" stroke="currentColor" stroke-width="4"/><path d="M19 19a5 5 0 1 1 7 5c-2 1-2 2-2 4" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round"/><circle cx="24" cy="34" r="2.6" fill="currentColor"/></svg></span><em>Step 1</em><h4>Start with the real question</h4><p>Before opening a dataset, I ask what decision it should help someone make. My project titles are questions for that reason.</p></li>
-      <li class="f2 rv"><span class="fic" aria-hidden="true"><svg viewBox="0 0 48 48"><circle cx="21" cy="21" r="12" fill="none" stroke="currentColor" stroke-width="4"/><path d="M30 30l10 10" stroke="currentColor" stroke-width="5" stroke-linecap="round"/><path d="M15 23l4 4 8-9" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><em>Step 2</em><h4>Be honest about what the data can't say</h4><p>In my H-1B study the answer was "no clear effect," and I said so, along with the limits of two snapshots of data.</p></li>
-      <li class="f3 rv"><span class="fic" aria-hidden="true"><svg viewBox="0 0 48 48"><rect x="7" y="9" width="34" height="26" rx="4" fill="none" stroke="currentColor" stroke-width="4"/><path d="M14 29v-6M21 29v-11M28 29v-8M35 29v-13" stroke="currentColor" stroke-width="4" stroke-linecap="round"/><path d="M18 41h12" stroke="currentColor" stroke-width="4" stroke-linecap="round"/></svg></span><em>Step 3</em><h4>Make it easy to act on</h4><p>A model is only useful if a manager can read it. That's why my optimization ended up in a Power BI dashboard, not a spreadsheet of equations.</p></li>
-    </ol>
   </div>
   <div class="facts2">
     <h3>A few things you might like to know</h3>
@@ -1219,6 +1221,7 @@ const guide = document.getElementById('guide'), say = document.getElementById('s
 const lines = {
   top:{p:'wave',t:"Hi, I'm Kashish! Tap me anytime for a tip."},
   ask:{p:'wave',t:"Pick any question. I answer in plain English."},
+  approach:{p:'wave',t:"This is how I start every project, before any code."},
   projects:{p:'search',t:"Choose a project to see the question, what I did and the result."},
   skills:{p:'laptop',t:"These are my tools. Tap one to jump to the project where I used it."},
   experience:{p:'briefcase',t:"Here's where I've worked, and what I do on campus."},
