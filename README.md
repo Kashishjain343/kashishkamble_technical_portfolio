@@ -7,11 +7,12 @@ Source code for my personal portfolio site: business, data and supply chain anal
 
 ## About
 
-I'm looking for full-time data analyst, business intelligence and supply chain analyst roles starting summer or fall 2027. Before grad school I ran inventory, dispatch and supplier coordination in a family business and built a production traceability database at Endurance Technologies.
+I'm looking for full-time data analyst, business analyst, BI and supply chain analyst roles starting June 2027. On campus I'm an SBE Captain at the Sachar International Center, a student caller for Brandeis Phonathon, and an incoming teaching assistant for Advanced Data Analytics. Before grad school I ran inventory, dispatch and supplier coordination in a family business and built a production traceability database at Endurance Technologies.
 
 ## Featured projects
 
 - **Physical AI opportunities for Schneider Electric** — field consulting project; scored 45 use cases across 11 sectors and recommended technology partners
+- **Can you trust an AI to read nursing-home inspection records?** — team research project: 1,590 automated tests of GPT-5.4 and gpt-5.4-mini over 418,947 CMS records; accuracy fell from 96% to 17% on long record lists, and a calculation tool restored 79–100%
 - **Building and fine-tuning a small language model** — pretrained a nano-BERT on WikiText-2, fine-tuned it on DrugLib reviews, benchmarked against bert-base-uncased (Python)
 - **Supply chain optimization** — Python linear programming and Power BI for warehouse inventory allocation
 - **H-1B policy and Boston-area mobility** — Tableau analysis of 65,360 POI-month observations from Advan data
@@ -22,7 +23,9 @@ I'm looking for full-time data analyst, business intelligence and supply chain a
 ## Built with
 
 - Hand-written HTML, CSS and a little JavaScript (no framework, no build step)
+- A recruiter-first homepage: an at-a-glance candidate card, plus an "Ask me anything" panel with an optional view of the SQL behind each answer
 - Inline SVG project visuals, generated from each project's real figures
+- A tool-usage chart that counts tools across the work on the site, rather than self-ratings
 - Hosted on Netlify, deployed from this repository
 
 ## Structure
