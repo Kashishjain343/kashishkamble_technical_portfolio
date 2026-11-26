@@ -23,3 +23,20 @@ p,li{color:#5b6866}
 .panel:nth-child(4){border-top:5px solid #0f5257}
 .metric{color:#e2725b;font-family:'Fraunces',Georgia,serif}
 .foot{border-top-color:#e7dfd2}
+
+/* Visual + numbers (2026-11) */
+.visual{margin:34px 0 10px;border:1px solid #e7dfd2;border-radius:18px;overflow:hidden;background:#fbf7f1;cursor:zoom-in;padding:0}
+.visual svg{display:block;width:100%;height:auto}
+.visual figcaption{font-size:.85rem;color:#5b6866;padding:10px 16px;background:#fff;border-top:1px solid #e7dfd2}
+.numbers{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:14px 0 10px}
+.numbers div{background:#fff;border:1px solid #e7dfd2;border-radius:16px;padding:18px 18px 16px}
+.numbers strong{display:block;font-family:'Fraunces',Georgia,serif;font-size:2rem;line-height:1.1;color:#0f5257}
+.numbers div:nth-child(2) strong{color:#e2725b}.numbers div:nth-child(3) strong{color:#b8861b}
+.numbers span{font-size:.9rem;color:#5b6866}
+.nums-h{font-size:.78rem;letter-spacing:.13em;font-weight:700;text-transform:uppercase;color:#e2725b;margin:36px 0 0}
+dialog.lb{border:0;padding:0;background:transparent;max-width:min(1000px,94vw);width:100%}
+dialog.lb::backdrop{background:rgba(20,30,30,.78)}
+dialog.lb .in{background:#fff;border-radius:20px;overflow:hidden}
+dialog.lb svg{display:block;width:100%;height:auto}
+dialog.lb button{display:block;margin:0 0 0 auto;font:700 14px 'DM Sans',sans-serif;border:0;background:#fff;color:#0f5257;padding:12px 18px;cursor:pointer}
+@media(max-width:650px){.numbers{grid-template-columns:1fr}}
