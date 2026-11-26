@@ -7,18 +7,18 @@
 <title>Kashish Kamble | Business &amp; Data Analyst</title>
 <meta name="description" content="Kashish Kamble, Business and Data Analyst. MS Business Analytics at Brandeis (May 2027). Projects in SQL, Python, R, Tableau, Power BI and Gen AI.">
 <meta name="theme-color" content="#1b1a35">
-<link rel="canonical" href="https://kashishkamble.netlify.app/">
+<link rel="canonical" href="https://kashishkailaskamble369.github.io/">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://kashishkamble.netlify.app/">
+<meta property="og:url" content="https://kashishkailaskamble369.github.io/">
 <meta property="og:title" content="Kashish Kamble | Business &amp; Data Analyst">
 <meta property="og:description" content="Business & data analyst, available June 2027. Schneider Electric field project, Brandeis MSBA, SQL, Python, Tableau, Power BI.">
-<meta property="og:image" content="https://kashishkamble.netlify.app/og-image.png">
+<meta property="og:image" content="https://kashishkailaskamble369.github.io/og-image.png">
 <meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;800&family=IBM+Plex+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Kashish Kamble","url":"https://kashishkamble.netlify.app/","jobTitle":"Business & Data Analyst","address":{"@type":"PostalAddress","addressLocality":"Waltham","addressRegion":"MA","addressCountry":"US"},"alumniOf":[{"@type":"CollegeOrUniversity","name":"Brandeis University"},{"@type":"CollegeOrUniversity","name":"Jain University"}],"knowsAbout":["Data Analysis","Business Intelligence","Supply Chain Management","SQL","Python","R","Tableau","Power BI","Generative AI"],"sameAs":["https://www.linkedin.com/in/kashishkamble369/","https://brandeis.joinhandshake.com/profiles/kashishkamble343"]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Kashish Kamble","url":"https://kashishkailaskamble369.github.io/","jobTitle":"Business & Data Analyst","address":{"@type":"PostalAddress","addressLocality":"Waltham","addressRegion":"MA","addressCountry":"US"},"alumniOf":[{"@type":"CollegeOrUniversity","name":"Brandeis University"},{"@type":"CollegeOrUniversity","name":"Jain University"}],"knowsAbout":["Data Analysis","Business Intelligence","Supply Chain Management","SQL","Python","R","Tableau","Power BI","Generative AI"],"sameAs":["https://www.linkedin.com/in/kashishkamble369/","https://brandeis.joinhandshake.com/profiles/kashishkamble343"]}</script>
 <style>
 /*
 VOICE: clear for a recruiter in 30 seconds, then warm and curious for the hiring team.
@@ -825,9 +825,9 @@ dialog.lb::backdrop{background:rgba(23,22,47,.8)}
         <a class="rt link" href="https://www.linkedin.com/in/kashishkamble369/" target="_blank" rel="noopener"><span class="ri l" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8 10v7M8 7v.01M12 17v-4a2 2 0 0 1 4 0v4M12 10v7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
           <span class="rv2"><small>LinkedIn</small><b>linkedin.com/in/kashishkamble369</b></span><span class="go" aria-hidden="true">↗</span></a>
       </div>
-      <form class="msg" id="msg" name="contact" method="POST" data-netlify="true" netlify-honeypot="company-website" novalidate>
+      <form class="msg" id="msg" name="contact" method="POST" action="https://api.web3forms.com/submit" novalidate>
         <p class="ftitle">Send me a message</p>
-        <input type="hidden" name="form-name" value="contact">
+        <input type="hidden" name="access_key" value="8614e35f-fbaf-4648-b4ba-1f406344e01d"><input type="hidden" name="subject" value="New message from your portfolio site"><input type="hidden" name="from_name" value="kashishkamble portfolio">
         <p class="hp"><label>Leave this empty <input name="company-website" tabindex="-1" autocomplete="off"></label></p>
         <fieldset class="topics"><legend>What's this about?</legend>
           <label><input type="radio" name="topic" value="Full-time role" checked><span>Full-time role</span></label>
@@ -1172,7 +1172,7 @@ document.querySelectorAll('.copy').forEach(b => b.addEventListener('click', asyn
 document.querySelectorAll('.em').forEach(a => { const e = a.dataset.u + '@' + a.dataset.d; a.href = 'mailto:' + e; if (!a.classList.contains('btn')) a.textContent = e; });
 { const c = document.getElementById('emcopy'), a = document.querySelector('.em'); if (c && a) c.dataset.copy = a.dataset.u + '@' + a.dataset.d; }
 const pageT0 = Date.now();
-// Contact form: validate, send to Netlify, show a thank-you
+// Contact form: validate, send via Web3Forms, show a thank-you
 const form = document.getElementById('msg');
 if (form) {
   const err = document.getElementById('ferr'), cnt = document.getElementById('fcount'), ta = document.getElementById('f-msg');
@@ -1188,13 +1188,13 @@ if (form) {
     if (form.querySelector('[name=company-website]').value || Date.now() - pageT0 < 4000) { form.hidden = true; sent.hidden = false; return; }
     btn.disabled = true; btn.textContent = 'Sending…';
     try {
-      const r = await fetch('/', { method:'POST', headers:{'Content-Type':'application/x-www-form-urlencoded'}, body:new URLSearchParams(new FormData(form)).toString() });
-      if (!r.ok) throw new Error(r.status);
+      const fd = new FormData(form); fd.delete('company-website');
+      const r = await fetch('https://api.web3forms.com/submit', { method:'POST', headers:{'Accept':'application/json'}, body:fd });
+      const j = await r.json().catch(() => ({}));
+      if (!r.ok || !j.success) throw new Error(r.status);
       form.hidden = true; sent.hidden = false; sent.focus();
     } catch (x) {
-      err.textContent = /netlify\.app$|kashishkamble/.test(location.hostname) && !/claude/.test(location.hostname)
-        ? "This couldn't send right now. Please email me instead using the address above."
-        : "Messages only send from the live website. In this preview, please use the email address above.";
+      err.textContent = "This couldn't send right now. Please email me instead using the address above.";
     } finally { btn.disabled = false; btn.textContent = 'Send message'; }
   });
 
