@@ -546,10 +546,14 @@ footer{padding-top:28px}
 .fl{display:flex;gap:18px;flex-wrap:wrap}.fl a{color:var(--ink2);font-weight:600;text-decoration:none}.fl a:hover{color:var(--pink)}
 
 /* Book mode: one page at a time */
-.page{display:none}
-.page.on{display:block;animation:turn .5s cubic-bezier(.2,.7,.2,1)}
+.book .page{display:none}
+.book .page.on{display:block;animation:turn .5s cubic-bezier(.2,.7,.2,1)}
+body:not(.book) .pager{display:none}
+.allwrap{text-align:center;margin-top:14px}
+.allbtn{all:unset;cursor:pointer;font:600 15px var(--sans);color:var(--ink2);text-decoration:underline;text-underline-offset:4px;padding:6px 10px;border-radius:8px}
+.allbtn:hover{color:var(--pink)}.allbtn:focus-visible{outline:2px solid var(--pink)}
 @keyframes turn{from{opacity:0;transform:translateX(26px)}to{opacity:1;transform:none}}
-.page.on.back{animation-name:turnb}
+.book .page.on.back{animation-name:turnb}
 @keyframes turnb{from{opacity:0;transform:translateX(-26px)}to{opacity:1;transform:none}}
 section.page{padding-top:64px;padding-bottom:16px}
 #home{padding-top:0}
@@ -570,7 +574,7 @@ section.page{padding-top:64px;padding-bottom:16px}
 .dots a{display:block;width:12px;height:12px;border-radius:50%;background:var(--line);transition:all .2s}
 .dots a[aria-current="page"]{background:var(--pink);width:30px;border-radius:6px}
 @media (max-width:560px){.pg b{font-size:16px}.dots{display:none}.pgw{grid-template-columns:1fr 1fr}}
-@media (prefers-reduced-motion:reduce){.page.on{animation:none}}
+@media (prefers-reduced-motion:reduce){.book .page.on{animation:none}}
 
 @media (max-width:780px){.nav{flex-wrap:wrap;height:auto;padding:10px 24px 0;row-gap:6px}.nav ul{display:flex!important;order:3;width:100%;overflow-x:auto;gap:22px;padding:4px 0 10px;scrollbar-width:none}.nav ul::-webkit-scrollbar{display:none}.nav ul a{white-space:nowrap;font-size:15px}html{scroll-padding-top:110px}}
 .pgw{align-items:stretch}.pg{justify-content:center}
@@ -749,7 +753,7 @@ dialog.lb::backdrop{background:rgba(23,22,47,.8)}
 
   <ol class="tl" id="xp-campus" role="tabpanel" aria-labelledby="xt-campus" hidden>
     <li class="soon"><time>Next</time><div class="tc"><span class="lg c2">TA</span><div><h3>Teaching Assistant, Advanced Data Analytics</h3><p class="org">Brandeis School of Business and Economics</p><p>Joining the teaching team for this course.</p></div><span class="when up">Upcoming</span></div></li>
-    <li class="live"><time>Now</time><div class="tc"><span class="lg c2">SC</span><div><h3>SBE Captain</h3><p class="org">Brandeis School of Business and Economics (SBE)</p><p>Run the front desk and help students, faculty and visitors.</p></div><span class="when">Nov 2026 – now</span></div></li>
+    <li class="live"><time>Now</time><div class="tc"><span class="lg c2">SC</span><div><h3>SBE Captain</h3><p class="org">Brandeis School of Business and Economics (SBE)</p></div><span class="when">Nov 2026 – now</span></div></li>
     <li class="live"><time>Now</time><div class="tc"><span class="lg c2">PH</span><div><h3>Student Caller</h3><p class="org">Brandeis Phonathon</p><p>Talk with alumni about their Brandeis experience and why giving matters.</p></div><span class="when">Sep 2026 – now</span></div></li>
   </ol>
 
@@ -760,7 +764,7 @@ dialog.lb::backdrop{background:rgba(23,22,47,.8)}
   </div>
   <aside class="xside" aria-live="polite">
     <div class="xs" data-x="work"><p class="k">At a glance</p><b>4 roles across energy, manufacturing, edtech and a family business</b><ul><li>Client consulting for Schneider Electric</li><li>Built real tools used on a factory floor</li><li>Ran day-to-day operations for over a year</li></ul></div>
-    <div class="xs" data-x="campus" hidden><p class="k">At a glance</p><b>3 campus roles alongside a full-time master's</b><ul><li>SBE Captain at the School of Business and Economics</li><li>Weekly alumni calls for Phonathon</li><li>Incoming TA for Advanced Data Analytics</li></ul></div>
+    <div class="xs" data-x="campus" hidden><p class="k">At a glance</p><b>3 campus roles alongside a full-time master's</b><ul><li>SBE Captain, Brandeis School of Business and Economics</li><li>Weekly alumni calls for Phonathon</li><li>Incoming TA for Advanced Data Analytics</li></ul></div>
     <div class="xs" data-x="edu" hidden><p class="k">At a glance</p><b>STEM-designated master's, graduating May 2027</b><ul><li>Up to 3 years of work authorization on STEM OPT</li><li>Undergraduate focus on data science and analysis</li></ul></div>
   </aside>
   </div>
@@ -774,7 +778,7 @@ dialog.lb::backdrop{background:rgba(23,22,47,.8)}
       <p class="pull">“Most of what I know about data, I learned by needing it.”</p>
       <p>A stockout I could have seen coming. A supplier who was always late. A factory log nobody could search. Those everyday problems pulled me into analytics, and they're still the problems I like solving most.</p>
       <p>I studied data science and analysis at Jain University in Bengaluru, then went back to the floor: running operations for my family's business in Aurangabad and building tracking tools at Endurance Technologies. Now I'm in the Boston area, finishing my master's at Brandeis.</p>
-      <p>Outside class, I'm usually at the business school front desk as an SBE Captain or on Phonathon calls with alumni. Both keep me practicing the other half of the job: listening first, then explaining clearly.</p>
+      <p>Outside class, I'm usually working as an SBE Captain for the business school or on Phonathon calls with alumni. Both keep me practicing the other half of the job: listening first, then explaining clearly.</p>
     </div>
   </div>
   <div class="how">
@@ -854,7 +858,7 @@ dialog.lb::backdrop{background:rgba(23,22,47,.8)}
     </div>
   </div>
 </div></section>
-<nav class="pager" id="pager" aria-label="Page navigation"><div class="wrap pgw"><a class="pg prev" id="pgprev" href="#home"><span>Previous</span><b>Home</b></a><ol class="dots" id="dots"></ol><a class="pg next" id="pgnext" href="#projects"><span>Next</span><b>Projects</b></a></div></nav>
+<nav class="pager" id="pager" aria-label="Page navigation"><div class="wrap pgw"><a class="pg prev" id="pgprev" href="#home"><span>Previous</span><b>Home</b></a><ol class="dots" id="dots"></ol><a class="pg next" id="pgnext" href="#projects"><span>Next</span><b>Projects</b></a></div><div class="allwrap"><button type="button" class="allbtn" id="allbtn">See everything on one page</button></div></nav>
 </main>
 
 
@@ -967,7 +971,16 @@ let curPage = null;
 const dots = document.getElementById('dots');
 dots.innerHTML = pages.map(p => `<li><a href="#${p.id}" aria-label="${p.dataset.title}"></a></li>`).join('');
 function pageOf(id){ const el = id && document.getElementById(id); if (!el) return 'home'; const pg = el.closest('.page'); return pg ? pg.id : 'home'; }
+function markNav(pid){ document.querySelectorAll('.nav ul a[data-p]').forEach(a => { if (a.dataset.p === pid) a.setAttribute('aria-current','page'); else a.removeAttribute('aria-current'); }); }
+// One long page: every section shows, you just scroll
+function flowMode(scrollId){
+  document.body.classList.remove('book'); pages.forEach(p => p.classList.remove('on','back')); curPage = null;
+  document.title = 'Kashish Kamble | Business & Data Analyst';
+  const el = scrollId && document.getElementById(scrollId);
+  if (el) el.scrollIntoView(); else scrollTo({top:0, behavior:'instant'});
+}
 function go(id, fromHash){
+  document.body.classList.add('book');
   const pid = order.includes(id) ? id : pageOf(id);
   const back = curPage && order.indexOf(pid) < order.indexOf(curPage);
   pages.forEach(p => { const on = p.id === pid; p.classList.toggle('on', on); p.classList.toggle('back', on && back); });
@@ -985,9 +998,17 @@ function go(id, fromHash){
   if (typeof setG === 'function') setG(pid === 'home' ? 'top' : pid);
   if (changed) document.title = (pid === 'home' ? '' : pages[i].dataset.title + ' | ') + 'Kashish Kamble | Business & Data Analyst';
 }
-document.addEventListener('click', e => { const a = e.target.closest('a[href^="#"]'); if (!a) return; const id = a.getAttribute('href').slice(1); if (!id) return; e.preventDefault(); if (id === 'top') { scrollTo({top:0, behavior:'smooth'}); return; } go(id); });
-addEventListener('hashchange', () => go(location.hash.slice(1), true));
-addEventListener('popstate', () => go(location.hash.slice(1) || 'home', true));
+document.addEventListener('click', e => { const a = e.target.closest('a[href^="#"]'); if (!a) return; const id = a.getAttribute('href').slice(1); if (!id) return; e.preventDefault(); if (id === 'top') { scrollTo({top:0, behavior:'smooth'}); return; }
+  if (id === 'home') { if (location.hash) history.pushState(null, '', location.pathname); flowMode(); markNav(null); return; }
+  go(id); });
+document.getElementById('allbtn').addEventListener('click', () => { const cp = curPage; history.pushState(null, '', location.pathname); flowMode(cp); });
+// In the long page, underline the menu item for the section on screen and let the cartoon follow along
+const secIO = new IntersectionObserver(es => { if (document.body.classList.contains('book')) return;
+  es.forEach(e => { if (!e.isIntersecting) return; const pid = e.target.id; markNav(pid === 'home' ? null : pid); if (pid !== 'home' && typeof setG === 'function') setG(pid); }); }, {rootMargin:'-45% 0px -50% 0px'});
+pages.forEach(p => secIO.observe(p));
+function route(){ const h = location.hash.slice(1); if (!h || h === 'home') { if (document.body.classList.contains('book')) flowMode(); markNav(null); } else go(h, true); }
+addEventListener('hashchange', route);
+addEventListener('popstate', route);
 
 const Q = {
   hire: { h:"Why should we hire her?", li:[
@@ -1009,7 +1030,7 @@ const Q = {
     more:'The project explorer below is now filtered to supply chain work. <a href="#projects">Jump to it</a>', sql:"SELECT project FROM work WHERE area = 'supply chain';", hl:"supply" },
   lead: { h:"Any leadership or campus roles?", li:[
     "<b>Teaching Assistant for Advanced Data Analytics</b> at the Brandeis business school, starting soon.",
-    "<b>SBE Captain</b> at the Brandeis School of Business and Economics (SBE) since November 2026: runs the front desk and helps students, faculty and visitors.",
+    "<b>SBE Captain</b> at the Brandeis School of Business and Economics (SBE) since November 2026.",
     "<b>Student Caller</b> for Brandeis Phonathon since September 2026: talks with alumni about their Brandeis experience."],
     sql:"SELECT role, org FROM campus_roles;" },
   avail: { h:"When and where can she start?", li:[
@@ -1211,7 +1232,7 @@ let cur = 'top', muted = seen, hideT;
 function setG(k){ if (k === cur || !lines[k]) return; cur = k; guide.dataset.pose = lines[k].p; say.textContent = lines[k].t;
   guide.classList.remove('swap'); void guide.offsetWidth; guide.classList.add('swap');
   if (!muted && !tipped.has(k) && !guide.classList.contains('dock')) { tipped.add(k); bubble.classList.remove('hide'); clearTimeout(hideT); hideT = setTimeout(()=>bubble.classList.add('hide'), 4000); } }
-addEventListener('scroll', () => { if (curPage !== 'home') return; const a = document.getElementById('ask'); setG(a && a.getBoundingClientRect().top < innerHeight * .45 ? 'ask' : 'top'); }, {passive:true});
+addEventListener('scroll', () => { if (document.body.classList.contains('book') ? curPage !== 'home' : document.getElementById('home').getBoundingClientRect().bottom < innerHeight * .5) return; const a = document.getElementById('ask'); setG(a && a.getBoundingClientRect().top < innerHeight * .45 ? 'ask' : 'top'); }, {passive:true});
 document.getElementById('bx').addEventListener('click', () => { muted = true; markSeen(); bubble.classList.add('hide'); });
 addEventListener('keydown', e => { if (e.key === 'Escape' && !bubble.classList.contains('hide')) { muted = true; markSeen(); bubble.classList.add('hide'); } });
 document.getElementById('avbtn').addEventListener('click', () => { const show = bubble.classList.contains('hide'); bubble.classList.toggle('hide', !show); muted = !show; clearTimeout(hideT); if (show) hideT = setTimeout(()=>bubble.classList.add('hide'), 5000); });
@@ -1226,7 +1247,7 @@ const fm = document.getElementById('msg');
 if (fm) { fm.addEventListener('focusin', () => guide.classList.add('away')); fm.addEventListener('focusout', e => { if (!fm.contains(e.relatedTarget)) guide.classList.remove('away'); }); }
 
 document.getElementById('y').textContent = new Date().getFullYear();
-go(location.hash.slice(1) || 'home', true);
+route();
 }
 </script>
 </body>
