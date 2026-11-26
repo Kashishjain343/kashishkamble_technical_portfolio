@@ -3,7 +3,9 @@
 Source code for my personal portfolio site: business, data and supply chain analytics projects from my MS in Business Analytics (STEM) at Brandeis University, graduating May 2027.
 
 🔗 **Live site:** [kashishkailaskamble369.github.io](https://kashishkailaskamble369.github.io/)
+
 📄 **Résumé:** [Kashish_Kamble_Resume.pdf](https://kashishkailaskamble369.github.io/Kashish_Kamble_Resume.pdf)
+
 💼 **LinkedIn:** [linkedin.com/in/kashishkamble369](https://www.linkedin.com/in/kashishkamble369/)
 
 ## About
